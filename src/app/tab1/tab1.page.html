@@ -1,0 +1,100 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Daily Activities
+    </ion-title>
+    <ion-buttons slot="start">
+        <ion-menu-button autoHide="false"></ion-menu-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-item button class="itemheader" lines="none" color="success" (click)="initexpand()">
+        <img src="assets/icon/islam_5.png">
+        Salah
+        <ion-icon name="arrow-dropdown"  *ngIf="!clicked" slot="end"></ion-icon>
+        <ion-icon name="arrow-dropright"  *ngIf="clicked" slot="end"></ion-icon>
+      </ion-item>
+        <ion-list *ngIf="clicked">
+            <ion-item *ngFor="let item of Salah" lines="inset" color="light" class="item">
+                <ion-label>{{item.name}} </ion-label>
+                <ion-checkbox name="chk" (ionChange)="checkSalah(item.name, item.id)" [checked]="item.IsDone"></ion-checkbox>
+              </ion-item>
+        </ion-list>
+        </ion-card>
+        <ion-card>
+        <ion-item button class="itemheader" lines="none" color="success" (click)="initexpand2()">
+            <img src="assets/icon/islam_1.png">
+            Tatawwu
+            <ion-icon name="arrow-dropdown"  *ngIf="!clicked2" slot="end"></ion-icon>
+            <ion-icon name="arrow-dropright"  *ngIf="clicked2" slot="end"></ion-icon>
+          </ion-item>
+        <ion-list *ngIf="clicked2">
+            <ion-item *ngFor="let item of Tatawwu" lines="inset" color="light" class="item">
+                <ion-label>{{item.name}} </ion-label>
+                <ion-checkbox name="chk" (ionChange)="checkTatawwu(item.name, item.id)" [checked]="item.IsDone"></ion-checkbox>
+              </ion-item>
+        </ion-list>
+      </ion-card>
+      <ion-card>
+        <ion-item button class="itemheader" lines="none" color="success" (click)="initexpand3()">
+            <img src="assets/icon/islam_2.png">
+            Qur'an
+            <ion-icon name="arrow-dropdown"  *ngIf="!clicked3" slot="end"></ion-icon>
+            <ion-icon name="arrow-dropright"  *ngIf="clicked3" slot="end"></ion-icon>
+          </ion-item>
+        <ion-list *ngIf="clicked3" color="light">
+            <ion-item *ngFor="let item of Quran" lines="inset" color="light" class="item">
+                <ion-label>{{item.name}} </ion-label>
+                <ion-checkbox name="chk" (ionChange)="checkQuran(item.name, item.id)" [checked]="item.IsDone"></ion-checkbox>
+              </ion-item>
+        </ion-list>
+      </ion-card>
+      <ion-card>
+        <ion-item button class="itemheader" lines="none" color="success" (click)="initexpand4()">
+            <img src="assets/icon/dua_hands.png">
+            Almathuraat
+            <ion-icon name="arrow-dropdown"  *ngIf="!clicked4" slot="end"></ion-icon>
+            <ion-icon name="arrow-dropright"  *ngIf="clicked4" slot="end"></ion-icon>
+          </ion-item>
+        <ion-list *ngIf="clicked4">
+            <ion-item *ngFor="let item of AlMathuraat" lines="inset" color="light" class="item">
+                <ion-label>{{item.name}} </ion-label>
+                <ion-checkbox name="chk" (ionChange)="checkAlMathuraat(item.name, item.id)" [checked]="item.IsDone"></ion-checkbox>
+              </ion-item>
+        </ion-list>
+      </ion-card>
+      <ion-card>
+        <ion-item button class="itemheader" lines="none" color="success" (click)="initexpand5()">
+            <img src="assets/icon/islam_4.png">
+            Ziyaarah
+            <ion-icon name="arrow-dropdown"  *ngIf="!clicked5" slot="end"></ion-icon>
+            <ion-icon name="arrow-dropright"  *ngIf="clicked5" slot="end"></ion-icon>
+          </ion-item>
+        <ion-list *ngIf="clicked5">
+            <ion-item *ngFor="let item of Ziyaarah" lines="inset" color="light" class="item">
+                <ion-label>{{item.name}} </ion-label>
+                <ion-checkbox name="chk" (ionChange)="checkZiyaarah(item.name, item.id)" [checked]="item.IsDone"></ion-checkbox>
+              </ion-item>
+        </ion-list>
+      </ion-card>
+      <ion-card>
+        <ion-item button class="itemheader" lines="none" color="success" (click)="initexpand6()">
+            <img src="assets/icon/islam_3.png">
+            Others
+            <ion-icon name="arrow-dropdown"  *ngIf="!clicked6" slot="end"></ion-icon>
+            <ion-icon name="arrow-dropright"  *ngIf="clicked6" slot="end"></ion-icon>
+          </ion-item>
+        <ion-list *ngIf="clicked6">
+            <ion-item *ngFor="let item of Others" lines="inset" color="light" class="item">
+                <ion-label>{{item.name}} </ion-label>
+                <ion-checkbox name="chk" (ionChange)="checkOthers(item.name, item.id)" [checked]="item.IsDone"></ion-checkbox>
+              </ion-item>
+        </ion-list>
+        </ion-card>
+        <ion-button (click)="tester()">
+          Test day end
+        </ion-button>
+</ion-content>

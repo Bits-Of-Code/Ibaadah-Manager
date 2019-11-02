@@ -1,0 +1,7 @@
+{
+  "name": "Ibaadah_App",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

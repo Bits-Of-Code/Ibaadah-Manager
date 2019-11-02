@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+        </ion-buttons>
+    <ion-title>options</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-item-group>
+  <ion-item-divider>
+    <ion-label>General</ion-label>
+  </ion-item-divider>
+
+  <ion-item>
+    <ion-label>General</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>General</ion-label>
+  </ion-item>
+</ion-item-group>
+<ion-item-group>
+  <ion-item-divider>
+    <ion-label>Others</ion-label>
+  </ion-item-divider>
+
+  <ion-item lines="none" (click)="confirmclear()">
+    <ion-label color="danger">Reset all records</ion-label>
+  </ion-item>
+</ion-item-group>
+</ion-content>

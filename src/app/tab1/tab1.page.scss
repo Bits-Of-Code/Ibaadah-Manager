@@ -1,0 +1,35 @@
+.welcome-card ion-img {
+  max-height: 35vh;
+  overflow: hidden;
+}
+img{
+  width: 2em;
+  height: 2em;
+  margin-right:20px;
+}
+ion-card{
+  background-color: #d2d4d8;
+}
+ion-list{
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.item{
+  font-size: 20px;
+}
+ion-checkbox{
+  --color: blue;
+  --size: 25px;
+} 
+
+.collapsed {
+  height: 0 !important;
+}
+
+.itemheader{
+  padding-left: 0px;
+  padding: 10px;
+  --border-radius: 10px;
+  font-size: 20px;
+  color: blue;
+}

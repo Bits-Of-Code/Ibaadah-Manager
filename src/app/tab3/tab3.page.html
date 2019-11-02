@@ -1,0 +1,103 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Total Evaluation
+    </ion-title>
+    <ion-buttons slot="start">
+        <ion-menu-button autoHide="false"></ion-menu-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<!-- <circle-progress percent="85" radius="100" animation="true" anumationDuration="300"></circle-progress> -->
+<ion-grid no-padding>
+  <!-- First Row -->
+  <ion-row justify-content:start>
+    <ion-col
+    size="4" 
+      size-sm= "5" 
+      size-xs="6" 
+      size-md="7" 
+      size-lg="8">
+      <ion-card>
+      <div class="ion-text-center">Prayers</div><br><br>
+      <div class="ion-text-center"><ion-button (click)="gotowklyprayereval('Salah')">THIS WEEK</ion-button></div>
+      <div class="ion-text-center"><ion-button (click)="gotomnthlyeval('Salah')">THIS MONTH</ion-button></div>
+      <div class="ion-text-center"><ion-button (click)="gotofromstart('Salah')">FROM THE START</ion-button></div>
+      </ion-card>
+    </ion-col>
+    <ion-col
+    size="4" 
+      size-sm= "5" 
+      size-xs="6" 
+      size-md="7" 
+      size-lg="8">
+     <ion-card>
+       <div class="ion-text-center">Tatawwu</div><br><br>
+       <div class="ion-text-center"><ion-button (click)="gotowklyprayereval('Tatawwu')">THIS WEEK</ion-button></div>
+       <div class="ion-text-center"><ion-button (click)="gotomnthlyeval('Tatawwu')">THIS MONTH</ion-button></div>
+       <div class="ion-text-center"><ion-button (click)="gotofromstart('Tatawwu')">FROM THE START</ion-button></div>
+     </ion-card>
+    </ion-col>
+  </ion-row>
+  <!-- Second Row -->
+  <ion-row>
+      <ion-col
+      size="4" 
+      size-sm= "5" 
+      size-xs="6" 
+      size-md="7" 
+      size-lg="8">
+        <ion-card>
+        <div class="ion-text-center">Qur'an</div><br><br>
+        <div class="ion-text-center"><ion-button (click)="gotowklyprayereval('Quran')">THIS WEEK</ion-button></div>
+        <div class="ion-text-center"><ion-button (click)="gotomnthlyeval('Quran')">THIS MONTH</ion-button></div>
+        <div class="ion-text-center"><ion-button (click)="gotofromstart('Quran')">FROM THE START</ion-button></div>
+        </ion-card>
+      </ion-col>
+      <ion-col
+      size="4" 
+      size-sm= "5" 
+      size-xs="6" 
+      size-md="7" 
+      size-lg="8">
+       <ion-card>
+         <div class="ion-text-center">Almathuraat</div><br><br>
+         <div class="ion-text-center"><ion-button (click)="gotowklyprayereval('Almathuraat')">THIS WEEK</ion-button></div>
+         <div class="ion-text-center"><ion-button (click)="gotomnthlyeval('Almathuraat')">THIS MONTH</ion-button></div>
+         <div class="ion-text-center"><ion-button (click)="gotofromstart('Almathuraat')">FROM THE START</ion-button></div>
+       </ion-card>
+      </ion-col>
+    </ion-row>
+    <!-- Last Row -->
+    <ion-row>
+        <ion-col
+        size="4" 
+      size-sm= "5" 
+      size-xs="6" 
+      size-md="5"
+      size-lg="5">
+          <ion-card>
+          <div class="ion-text-center">Ziyaarah</div><br><br>
+          <div class="ion-text-center"><ion-button (click)="gotowklyprayereval('Ziyaarah')">THIS WEEK</ion-button></div>
+          <div class="ion-text-center"><ion-button (click)="gotomnthlyeval('Ziyaarah')">THIS MONTH</ion-button></div>
+          <div class="ion-text-center"><ion-button (click)="gotofromstart('Ziyaarah')">FROM THE START</ion-button></div>
+          </ion-card>
+        </ion-col>
+        <ion-col
+        size="4" 
+      size-sm= "5" 
+      size-xs="6" 
+      size-md="5"
+      size-lg="5">
+         <ion-card>
+           <div class="ion-text-center">Others</div><br><br>
+           <div class="ion-text-center"><ion-button (click)="gotowklyprayereval('Others')">THIS WEEK</ion-button></div>
+           <div class="ion-text-center"><ion-button (click)="gotomnthlyeval('Others')">THIS MONTH</ion-button></div>
+           <div class="ion-text-center"><ion-button (click)="gotofromstart('Others')">FROM THE START</ion-button></div>
+         </ion-card>
+        </ion-col>
+      </ion-row>
+</ion-grid>
+</ion-content>

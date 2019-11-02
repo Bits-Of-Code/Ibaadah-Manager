@@ -1,0 +1,729 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+        </ion-buttons>
+    <ion-title>Weekly Evaluation</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="Salah">
+  <ion-card>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+            <circle-progress
+            [percent]="subhvalue"
+            [radius]="60"
+            [outerStrokeWidth]="16"
+            [innerStrokeWidth]="8"
+            [outerStrokeColor]="'#78C000'"
+            [innerStrokeColor]="'#C7E596'"
+            [animation]="true"
+            [animationDuration]="300">
+    </circle-progress>
+        </ion-col>
+        <ion-col>
+          <br>
+            <div class="label">Subh</div>
+            <br>
+            <br>
+            Observed.............. {{subhcount}} of 7
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+  <ion-card>
+      <ion-grid>
+          <ion-row>
+            <ion-col>
+                <circle-progress
+                [percent]="zuhrvalue"
+                [radius]="60"
+                [outerStrokeWidth]="16"
+                [innerStrokeWidth]="8"
+                [outerStrokeColor]="'#78C000'"
+                [innerStrokeColor]="'#C7E596'"
+                [animation]="true"
+                [animationDuration]="300">
+        </circle-progress>
+            </ion-col>
+            <ion-col>
+              <br>
+                <div class="label">Dhuhr</div>
+                <br>
+                <br>
+                Observed.............. {{zuhrcount}} of 7
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+    </ion-card>
+    <ion-card>
+        <ion-grid>
+            <ion-row>
+              <ion-col>
+                  <circle-progress
+                  [percent]="asrvalue"
+                  [radius]="60"
+                  [outerStrokeWidth]="16"
+                  [innerStrokeWidth]="8"
+                  [outerStrokeColor]="'#78C000'"
+                  [innerStrokeColor]="'#C7E596'"
+                  [animation]="true"
+                  [animationDuration]="300">
+          </circle-progress>
+              </ion-col>
+              <ion-col>
+                <br>
+                  <div class="label">Asr</div>
+                  <br>
+                  <br>
+                  Observed.............. {{asrcount}} of 7
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+      </ion-card>
+      <ion-card>
+          <ion-grid>
+              <ion-row>
+                <ion-col>
+                    <circle-progress
+                    [percent]="maghribvalue"
+                    [radius]="60"
+                    [outerStrokeWidth]="16"
+                    [innerStrokeWidth]="8"
+                    [outerStrokeColor]="'#78C000'"
+                    [innerStrokeColor]="'#C7E596'"
+                    [animation]="true"
+                    [animationDuration]="300">
+            </circle-progress>
+                </ion-col>
+                <ion-col>
+                  <br>
+                    <div class="label">Maghrib</div>
+                    <br>
+                    <br>
+                    Observed.............. {{maghribcount}} of 7
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+        </ion-card>
+        <ion-card>
+            <ion-grid>
+                <ion-row>
+                  <ion-col>
+                      <circle-progress
+                      [percent]="ishavalue"
+                      [radius]="60"
+                      [outerStrokeWidth]="16"
+                      [innerStrokeWidth]="8"
+                      [outerStrokeColor]="'#78C000'"
+                      [innerStrokeColor]="'#C7E596'"
+                      [animation]="true"
+                      [animationDuration]="300">
+              </circle-progress>
+                  </ion-col>
+                  <ion-col>
+                    <br>
+                      <div class="label">Isha</div>
+                      <br>
+                      <br>
+                      Observed.............. {{ishacount}} of 7
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+          </ion-card>
+        </div>
+
+  <div *ngIf="Tatawwu">
+            <ion-card>
+              <ion-grid>
+                <ion-row>
+                  <ion-col>
+                      <circle-progress
+                      [percent]="tahajjudvalue"
+                      [radius]="60"
+                      [outerStrokeWidth]="16"
+                      [innerStrokeWidth]="8"
+                      [outerStrokeColor]="'#78C000'"
+                      [innerStrokeColor]="'#C7E596'"
+                      [animation]="true"
+                      [animationDuration]="300">
+              </circle-progress>
+                  </ion-col>
+                  <ion-col>
+                    <br>
+                      <div class="label">Tahajjud</div>
+                      <br>
+                      <br>
+                      Observed.............. {{tahajjudcount}} of 7
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-card>
+            <ion-card>
+                <ion-grid>
+                    <ion-row>
+                      <ion-col>
+                          <circle-progress
+                          [percent]="duhavalue"
+                          [radius]="60"
+                          [outerStrokeWidth]="16"
+                          [innerStrokeWidth]="8"
+                          [outerStrokeColor]="'#78C000'"
+                          [innerStrokeColor]="'#C7E596'"
+                          [animation]="true"
+                          [animationDuration]="300">
+                  </circle-progress>
+                      </ion-col>
+                      <ion-col>
+                        <br>
+                          <div class="label">Duha</div>
+                          <br>
+                          <br>
+                          Observed.............. {{duhacount}} of 7
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+              </ion-card>
+              <ion-card>
+                  <ion-grid>
+                      <ion-row>
+                        <ion-col>
+                            <circle-progress
+                            [percent]="sawmvalue"
+                            [radius]="60"
+                            [outerStrokeWidth]="16"
+                            [innerStrokeWidth]="8"
+                            [outerStrokeColor]="'#78C000'"
+                            [innerStrokeColor]="'#C7E596'"
+                            [animation]="true"
+                            [animationDuration]="300">
+                    </circle-progress>
+                        </ion-col>
+                        <ion-col>
+                          <br>
+                            <div class="label">Sawm</div>
+                            <br>
+                            <br>
+                            Observed.............. {{sawmcount}} of 7
+                        </ion-col>
+                      </ion-row>
+                    </ion-grid>
+                </ion-card>
+                <ion-card>
+                    <ion-grid>
+                        <ion-row>
+                          <ion-col>
+                              <circle-progress
+                              [percent]="taobahvalue"
+                              [radius]="60"
+                              [outerStrokeWidth]="16"
+                              [innerStrokeWidth]="8"
+                              [outerStrokeColor]="'#78C000'"
+                              [innerStrokeColor]="'#C7E596'"
+                              [animation]="true"
+                              [animationDuration]="300">
+                      </circle-progress>
+                          </ion-col>
+                          <ion-col>
+                            <br>
+                              <div class="label">Taobah</div>
+                              <br>
+                              <br>
+                              Observed.............. {{taobahcount}} of 7
+                          </ion-col>
+                        </ion-row>
+                      </ion-grid>
+                  </ion-card>
+         </div>
+
+  <div *ngIf="Quran">
+                      <ion-card>
+                        <ion-grid>
+                          <ion-row>
+                            <ion-col>
+                                <circle-progress
+                                [percent]="tilaawahvalue"
+                                [radius]="60"
+                                [outerStrokeWidth]="16"
+                                [innerStrokeWidth]="8"
+                                [outerStrokeColor]="'#78C000'"
+                                [innerStrokeColor]="'#C7E596'"
+                                [animation]="true"
+                                [animationDuration]="300">
+                        </circle-progress>
+                            </ion-col>
+                            <ion-col>
+                              <br>
+                                <div class="label">Tilaawah</div>
+                                <br>
+                                <br>
+                                Observed.............. {{tilaawahcount}} of 7
+                            </ion-col>
+                          </ion-row>
+                        </ion-grid>
+                      </ion-card>
+                      <ion-card>
+                          <ion-grid>
+                              <ion-row>
+                                <ion-col>
+                                    <circle-progress
+                                    [percent]="hifzvalue"
+                                    [radius]="60"
+                                    [outerStrokeWidth]="16"
+                                    [innerStrokeWidth]="8"
+                                    [outerStrokeColor]="'#78C000'"
+                                    [innerStrokeColor]="'#C7E596'"
+                                    [animation]="true"
+                                    [animationDuration]="300">
+                            </circle-progress>
+                                </ion-col>
+                                <ion-col>
+                                  <br>
+                                    <div class="label">Hifz</div>
+                                    <br>
+                                    <br>
+                                    Observed.............. {{hifzcount}} of 7
+                                </ion-col>
+                              </ion-row>
+                            </ion-grid>
+                        </ion-card>
+                        <ion-card>
+                            <ion-grid>
+                                <ion-row>
+                                  <ion-col>
+                                      <circle-progress
+                                      [percent]="revisionvalue"
+                                      [radius]="60"
+                                      [outerStrokeWidth]="16"
+                                      [innerStrokeWidth]="8"
+                                      [outerStrokeColor]="'#78C000'"
+                                      [innerStrokeColor]="'#C7E596'"
+                                      [animation]="true"
+                                      [animationDuration]="300">
+                              </circle-progress>
+                                  </ion-col>
+                                  <ion-col>
+                                    <br>
+                                      <div class="label">Revision</div>
+                                      <br>
+                                      <br>
+                                      Observed.............. {{revisioncount}} of 7
+                                  </ion-col>
+                                </ion-row>
+                              </ion-grid>
+                          </ion-card>
+                          <ion-card>
+                              <ion-grid>
+                                  <ion-row>
+                                    <ion-col>
+                                        <circle-progress
+                                        [percent]="tafsirvalue"
+                                        [radius]="60"
+                                        [outerStrokeWidth]="16"
+                                        [innerStrokeWidth]="8"
+                                        [outerStrokeColor]="'#78C000'"
+                                        [innerStrokeColor]="'#C7E596'"
+                                        [animation]="true"
+                                        [animationDuration]="300">
+                                </circle-progress>
+                                    </ion-col>
+                                    <ion-col>
+                                      <br>
+                                        <div class="label">Tafsir</div>
+                                        <br>
+                                        <br>
+                                        Observed.............. {{tafsircount}} of 7
+                                    </ion-col>
+                                  </ion-row>
+                                </ion-grid>
+                            </ion-card>
+         </div>
+                  
+  <div *ngIf="Almathuraat">
+                                <ion-card>
+                                  <ion-grid>
+                                    <ion-row>
+                                      <ion-col>
+                                          <circle-progress
+                                          [percent]="morningvalue"
+                                          [radius]="60"
+                                          [outerStrokeWidth]="16"
+                                          [innerStrokeWidth]="8"
+                                          [outerStrokeColor]="'#78C000'"
+                                          [innerStrokeColor]="'#C7E596'"
+                                          [animation]="true"
+                                          [animationDuration]="300">
+                                  </circle-progress>
+                                      </ion-col>
+                                      <ion-col>
+                                        <br>
+                                          <div class="label">Morning</div>
+                                          <br>
+                                          <br>
+                                          Observed.............. {{morningcount}} of 7
+                                      </ion-col>
+                                    </ion-row>
+                                  </ion-grid>
+                                </ion-card>
+                                <ion-card>
+                                    <ion-grid>
+                                        <ion-row>
+                                          <ion-col>
+                                              <circle-progress
+                                              [percent]="eveningvalue"
+                                              [radius]="60"
+                                              [outerStrokeWidth]="16"
+                                              [innerStrokeWidth]="8"
+                                              [outerStrokeColor]="'#78C000'"
+                                              [innerStrokeColor]="'#C7E596'"
+                                              [animation]="true"
+                                              [animationDuration]="300">
+                                      </circle-progress>
+                                          </ion-col>
+                                          <ion-col>
+                                            <br>
+                                              <div class="label">Evening</div>
+                                              <br>
+                                              <br>
+                                              Observed.............. {{eveningcount}} of 7
+                                          </ion-col>
+                                        </ion-row>
+                                      </ion-grid>
+                                  </ion-card>
+         </div>
+
+  <div *ngIf="Ziyaarah">
+            <ion-card>
+              <ion-grid>
+                <ion-row>
+                  <ion-col>
+                      <circle-progress
+                      [percent]="qubuurvalue"
+                      [radius]="60"
+                      [outerStrokeWidth]="16"
+                      [innerStrokeWidth]="8"
+                      [outerStrokeColor]="'#78C000'"
+                      [innerStrokeColor]="'#C7E596'"
+                      [animation]="true"
+                      [animationDuration]="300">
+              </circle-progress>
+                  </ion-col>
+                  <ion-col>
+                    <br>
+                      <div class="label">Qubuur</div>
+                      <br>
+                      <br>
+                      Observed.............. {{qubuurcount}} of 7
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-card>
+            <ion-card>
+                <ion-grid>
+                    <ion-row>
+                      <ion-col>
+                          <circle-progress
+                          [percent]="brothervalue"
+                          [radius]="60"
+                          [outerStrokeWidth]="16"
+                          [innerStrokeWidth]="8"
+                          [outerStrokeColor]="'#78C000'"
+                          [innerStrokeColor]="'#C7E596'"
+                          [animation]="true"
+                          [animationDuration]="300">
+                  </circle-progress>
+                      </ion-col>
+                      <ion-col>
+                        <br>
+                          <div class="label">Brother</div>
+                          <br>
+                          <br>
+                          Observed.............. {{brothercount}} of 7
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+              </ion-card>
+              <ion-card>
+                  <ion-grid>
+                      <ion-row>
+                        <ion-col>
+                            <circle-progress
+                            [percent]="hospitalvalue"
+                            [radius]="60"
+                            [outerStrokeWidth]="16"
+                            [innerStrokeWidth]="8"
+                            [outerStrokeColor]="'#78C000'"
+                            [innerStrokeColor]="'#C7E596'"
+                            [animation]="true"
+                            [animationDuration]="300">
+                    </circle-progress>
+                        </ion-col>
+                        <ion-col>
+                          <br>
+                            <div class="label">Hospital</div>
+                            <br>
+                            <br>
+                            Observed.............. {{hospitalcount}} of 7
+                        </ion-col>
+                      </ion-row>
+                    </ion-grid>
+                </ion-card>
+                <ion-card>
+                    <ion-grid>
+                        <ion-row>
+                          <ion-col>
+                              <circle-progress
+                              [percent]="solihinvalue"
+                              [radius]="60"
+                              [outerStrokeWidth]="16"
+                              [innerStrokeWidth]="8"
+                              [outerStrokeColor]="'#78C000'"
+                              [innerStrokeColor]="'#C7E596'"
+                              [animation]="true"
+                              [animationDuration]="300">
+                      </circle-progress>
+                          </ion-col>
+                          <ion-col>
+                            <br>
+                              <div class="label">Solihin</div>
+                              <br>
+                              <br>
+                              Observed.............. {{solihincount}} of 7
+                          </ion-col>
+                        </ion-row>
+                      </ion-grid>
+                  </ion-card>
+         </div>
+        
+  <div *ngIf="Others">
+            <ion-card>
+              <ion-grid>
+                <ion-row>
+                  <ion-col>
+                      <circle-progress
+                      [percent]="iftarvalue"
+                      [radius]="60"
+                      [outerStrokeWidth]="16"
+                      [innerStrokeWidth]="8"
+                      [outerStrokeColor]="'#78C000'"
+                      [innerStrokeColor]="'#C7E596'"
+                      [animation]="true"
+                      [animationDuration]="300">
+              </circle-progress>
+                  </ion-col>
+                  <ion-col>
+                    <br>
+                      <div class="label">Group Iftar</div>
+                      <br>
+                      <br>
+                      Observed.............. {{iftarcount}} of 7
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-card>
+            <ion-card>
+                <ion-grid>
+                    <ion-row>
+                      <ion-col>
+                          <circle-progress
+                          [percent]="bookvalue"
+                          [radius]="60"
+                          [outerStrokeWidth]="16"
+                          [innerStrokeWidth]="8"
+                          [outerStrokeColor]="'#78C000'"
+                          [innerStrokeColor]="'#C7E596'"
+                          [animation]="true"
+                          [animationDuration]="300">
+                  </circle-progress>
+                      </ion-col>
+                      <ion-col>
+                        <br>
+                          <div class="label">Book Reading</div>
+                          <br>
+                          <br>
+                          Observed.............. {{bookcount}} of 7
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+              </ion-card>
+              <ion-card>
+                  <ion-grid>
+                      <ion-row>
+                        <ion-col>
+                            <circle-progress
+                            [percent]="riyaadahvalue"
+                            [radius]="60"
+                            [outerStrokeWidth]="16"
+                            [innerStrokeWidth]="8"
+                            [outerStrokeColor]="'#78C000'"
+                            [innerStrokeColor]="'#C7E596'"
+                            [animation]="true"
+                            [animationDuration]="300">
+                    </circle-progress>
+                        </ion-col>
+                        <ion-col>
+                          <br>
+                            <div class="label">Riyaadah</div>
+                            <br>
+                            <br>
+                            Observed.............. {{riyaadahcount}} of 7
+                        </ion-col>
+                      </ion-row>
+                    </ion-grid>
+                </ion-card>
+                <ion-card>
+                    <ion-grid>
+                        <ion-row>
+                          <ion-col>
+                              <circle-progress
+                              [percent]="halqahvalue"
+                              [radius]="60"
+                              [outerStrokeWidth]="16"
+                              [innerStrokeWidth]="8"
+                              [outerStrokeColor]="'#78C000'"
+                              [innerStrokeColor]="'#C7E596'"
+                              [animation]="true"
+                              [animationDuration]="300">
+                      </circle-progress>
+                          </ion-col>
+                          <ion-col>
+                            <br>
+                              <div class="label">Halqah</div>
+                              <br>
+                              <br>
+                              Observed.............. {{halqahcount}} of 7days}}
+                          </ion-col>
+                        </ion-row>
+                      </ion-grid>
+                  </ion-card>
+                  <ion-card>
+                      <ion-grid>
+                          <ion-row>
+                            <ion-col>
+                                <circle-progress
+                                [percent]="sadaqahvalue"
+                                [radius]="60"
+                                [outerStrokeWidth]="16"
+                                [innerStrokeWidth]="8"
+                                [outerStrokeColor]="'#78C000'"
+                                [innerStrokeColor]="'#C7E596'"
+                                [animation]="true"
+                                [animationDuration]="300">
+                        </circle-progress>
+                            </ion-col>
+                            <ion-col>
+                              <br>
+                                <div class="label">Sadaqah</div>
+                                <br>
+                                <br>
+                                Observed.............. {{sadaqahcount}} of 7
+                            </ion-col>
+                          </ion-row>
+                        </ion-grid>
+                    </ion-card>
+                    <ion-card>
+                        <ion-grid>
+                          <ion-row>
+                            <ion-col>
+                                <circle-progress
+                                [percent]="fardiyyahvalue"
+                                [radius]="60"
+                                [outerStrokeWidth]="16"
+                                [innerStrokeWidth]="8"
+                                [outerStrokeColor]="'#78C000'"
+                                [innerStrokeColor]="'#C7E596'"
+                                [animation]="true"
+                                [animationDuration]="300">
+                        </circle-progress>
+                            </ion-col>
+                            <ion-col>
+                              <br>
+                                <div class="label">Fardiyyah</div>
+                                <br>
+                                <br>
+                                Observed.............. {{fardiyyahcount}} of 7
+                            </ion-col>
+                          </ion-row>
+                        </ion-grid>
+                      </ion-card>
+                      <ion-card>
+                          <ion-grid>
+                              <ion-row>
+                                <ion-col>
+                                    <circle-progress
+                                    [percent]="familyvalue"
+                                    [radius]="60"
+                                    [outerStrokeWidth]="16"
+                                    [innerStrokeWidth]="8"
+                                    [outerStrokeColor]="'#78C000'"
+                                    [innerStrokeColor]="'#C7E596'"
+                                    [animation]="true"
+                                    [animationDuration]="300">
+                            </circle-progress>
+                                </ion-col>
+                                <ion-col>
+                                  <br>
+                                    <div class="label">Family Sitting</div>
+                                    <br>
+                                    <br>
+                                    Observed.............. {{familycount}} of 7
+                                </ion-col>
+                              </ion-row>
+                            </ion-grid>
+                        </ion-card>
+                        <ion-card>
+                            <ion-grid>
+                                <ion-row>
+                                  <ion-col>
+                                      <circle-progress
+                                      [percent]="remembrancevalue"
+                                      [radius]="60"
+                                      [outerStrokeWidth]="16"
+                                      [innerStrokeWidth]="8"
+                                      [outerStrokeColor]="'#78C000'"
+                                      [innerStrokeColor]="'#C7E596'"
+                                      [animation]="true"
+                                      [animationDuration]="300">
+                              </circle-progress>
+                                  </ion-col>
+                                  <ion-col>
+                                    <br>
+                                      <div class="label">Remembrance</div>
+                                      <br>
+                                      <br>
+                                      Observed.............. {{remembrancecount}} of 7
+                                  </ion-col>
+                                </ion-row>
+                              </ion-grid>
+                          </ion-card>
+                          <ion-card>
+                              <ion-grid>
+                                  <ion-row>
+                                    <ion-col>
+                                        <circle-progress
+                                        [percent]="rabitohvalue"
+                                        [radius]="60"
+                                        [outerStrokeWidth]="16"
+                                        [innerStrokeWidth]="8"
+                                        [outerStrokeColor]="'#78C000'"
+                                        [innerStrokeColor]="'#C7E596'"
+                                        [animation]="true"
+                                        [animationDuration]="300">
+                                </circle-progress>
+                                    </ion-col>
+                                    <ion-col>
+                                      <br>
+                                        <div class="label">Rabitoh</div>
+                                        <br>
+                                        <br>
+                                        Observed.............. {{rabitohcount}} of 7
+                                    </ion-col>
+                                  </ion-row>
+                                </ion-grid>
+                            </ion-card>
+         </div>
+
+</ion-content>

@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Evaluation
+    </ion-title>
+    <ion-buttons slot="start">
+        <ion-menu-button autoHide="false"></ion-menu-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+     <div class="ion-text-center">Salah</div>
+  <ion-item lines="none">
+    <ion-progress-bar class="progress bar" style="height:30px" [color]="salahprogress" [value]="counter"></ion-progress-bar>
+  </ion-item><br>
+ <ion-item *ngIf="missedsalah.length !== 0"> 
+   <div  class="missed">Not observed 
+    <ion-chip *ngFor="let item of missedsalah" color="danger" outline="true">{{item}}</ion-chip>
+  </div>
+ </ion-item>
+  <div class="ion-text-center">Tatawwu</div>
+  <ion-item lines="none">
+    <ion-progress-bar class="progress bar" style="height:30px" [color]="tatawwuprogress" [value]="counter2"></ion-progress-bar>
+  </ion-item><br>
+  <ion-item *ngIf="missedtatawwu.length !== 0">
+      <div class="missed">Not observed 
+        <ion-chip *ngFor="let item of missedtatawwu" color="danger" outline="true">{{item}}</ion-chip>
+      </div><br>
+  </ion-item>
+  <div class="ion-text-center">Quran</div>
+  <ion-item lines="none">
+    <ion-progress-bar class="progress bar" style="height:30px" [color]="quranprogress" [value]="counter3"></ion-progress-bar>
+  </ion-item><br>
+  <ion-item *ngIf="missedquran.length !== 0">
+      <div class="missed">Not done 
+        <ion-chip *ngFor="let item of missedquran" color="danger" outline="true">{{item}}</ion-chip>
+      </div>
+  </ion-item>
+  <div class="ion-text-center">Almathuraat</div>
+  <ion-item lines="none">
+    <ion-progress-bar class="progress bar" style="height:30px" [color]="almathuraatprogress" [value]="counter4"></ion-progress-bar>
+  </ion-item><br>
+  <ion-item *ngIf="missedalmathuraat.length !== 0">
+      <div class="missed">Not done
+          <ion-chip *ngFor="let item of missedalmathuraat" color="danger" outline="true">{{item}}</ion-chip>
+        </div>
+  </ion-item>
+  <div class="ion-text-center">Ziyaarah</div>
+  <ion-item lines="none">
+    <ion-progress-bar class="progress bar" style="height:30px" [color]="ziyaarahprogress" [value]="counter5"></ion-progress-bar>
+  </ion-item><br>
+  <ion-item *ngIf="missedziyaarah.length !== 0">
+      <div class="missed">Not done 
+          <ion-chip *ngFor="let item of missedziyaarah" color="danger" outline="true">{{item}}</ion-chip>
+        </div>
+  </ion-item>
+  <div class="ion-text-center">Others</div>
+  <ion-item lines="none">
+    <ion-progress-bar class="progress bar" style="height:30px" [color]="othersprogress" [value]="counter6"></ion-progress-bar>
+  </ion-item><br>
+  <ion-item *ngIf="missedothers.length !== 0">
+      <div class="missed">Not done
+          <ion-chip *ngFor="let item of missedothers" color="danger" outline="true">{{item}}</ion-chip>
+        </div>
+  </ion-item> 
+</ion-list> 
+</ion-content>

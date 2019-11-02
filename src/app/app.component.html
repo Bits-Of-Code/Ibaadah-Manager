@@ -1,0 +1,26 @@
+<ion-app>
+  <ion-menu contentId="content1" side="start">
+    <ion-content>
+      <ion-img src="..\assets\icon\favicon.png"></ion-img><br>
+
+        <ion-item button (click)="gotohome()" lines="none">
+          Home
+          <ion-icon name="home" slot="end"></ion-icon>
+        </ion-item>
+        <ion-item button (click)="gotooptionspage()" lines="none">
+          Options
+          <ion-icon name="cog" slot="end"></ion-icon>
+        </ion-item>
+          <ion-item button lines="none">
+              Share
+              <ion-icon name="Share" slot="end"></ion-icon>
+            </ion-item>
+            <ion-item button lines="none">
+                Feedback
+                <ion-icon name="paper" slot="end"></ion-icon>
+              </ion-item>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="content1" main></ion-router-outlet>
+ 
+</ion-app>
